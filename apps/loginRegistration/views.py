@@ -9,7 +9,7 @@ def index(request):
 
 def process(request):
     # 0 is True or False; 1 is Users or errors
-    if request.method != 'POST':
+    if request.method != 'POST':    #
         return redirect ('/')
     else:
         user_valid = User.objects.validate(request.POST)
